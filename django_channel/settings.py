@@ -25,7 +25,7 @@ SECRET_KEY = '$r7hut+tz62u@8dm-m&ep9trlqkd*=%(4z14jms3&p5+%cw3l#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,7 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'chat',
-    'channels'
+    'channels',
+    'sslserver',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -70,7 +72,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'django_channel.wsgi.application'
-
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = False
+CORS_ALLOW_HEADERS = ['*']
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
