@@ -16,3 +16,5 @@ communicate with the server, other http traffic is routed the traditional way
 
 
 the chat socketio demo was taken from [here](https://github.com/miguelgrinberg/python-socketio)
+
+daphne django_channel.asgi:application -e ssl:8000:privateKey=/var/ssl/private.key:certKey=/var/ssl/certificate.crt
